@@ -3,47 +3,60 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="index.css" />
     <title>BAM</title>
   </head>
   <body>
-    <div>
+    <div class="switch">
       <label>
-        Switch 1:
+        <span class="switch-label" id="switch-label1">Switch 1:</span>
         <input id="switch1" type="checkbox" />
-        <span id="switch1Status"></span>
+        <span class="slider" id="switch1Status"></span>
+        <span class="slider-label top-label">1</span>
+        <span class="slider-label bottom-label">0</span>
       </label>
     </div>
-    <div>
+    <div class="switch">
       <label>
-        Switch 2:
+        <span class="switch-label" id="switch-label2">Switch 2:</span>
         <input id="switch2" type="checkbox" />
-        <span id="switch2Status"></span>
+        <span class="slider" id="switch2Status"></span>
+        <span class="slider-label top-label">1</span>
+        <span class="slider-label bottom-label">0</span>
       </label>
     </div>
-    <div>
+    <div class="switch">
       <label>
-        Switch 3:
+        <span class="switch-label" id="switch-label3">Switch 3:</span>
         <input id="switch3" type="checkbox" />
-        <span id="switch3Status"></span>
+        <span class="slider" id="switch3Status"></span>
+        <span class="slider-label top-label">1</span>
+        <span class="slider-label bottom-label">0</span>
       </label>
     </div>
-    <div>
+    <div class="switch">
       <label>
-        Switch 4:
+        <span class="switch-label" id="switch-label4">Switch 4:</span>
         <input id="switch4" type="checkbox" />
-        <span id="switch4Status"></span>
+        <span class="slider" id="switch4Status"></span>
+        <span class="slider-label top-label">1</span>
+        <span class="slider-label bottom-label">0</span>
       </label>
     </div>
-    <div>
+    <div class="switch">
       <label>
-        Switch 5:
+        <span class="switch-label" id="switch-label5">Switch 5:</span>
         <input id="switch5" type="checkbox" />
-        <span id="switch5Status"></span>
+        <span class="slider" id="switch5Status"></span>
+        <span class="slider-label top-label">1</span>
+        <span class="slider-label bottom-label">0</span>
       </label>
     </div>
-    <button id="addButton">Add</button>
-    <div>Result <span id="result">0</span></div>
+
+    <div>
+      <button id="addButton">Add</button>
+      Result <span id="result">0</span>
+    </div>
     <script src="index.js"></script>
   </body>
 </html>

@@ -1,0 +1,93 @@
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 30px; /* Decreased width to make it thinner */
+  height: 100px; /* Increased height to make it longer */
+  margin-bottom: 10px;
+  margin: 30px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.switch .slider {
+  position: absolute;
+  top: 20px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  border-radius: 50px; /* Increased border-radius to make it thinner */
+  transition: background-color 0.2s;
+}
+
+.switch .slider:before {
+  position: absolute;
+  content: "";
+  height: 24px; /* Decreased height to make it smaller */
+  width: 24px; /* Decreased width to make it smaller */
+  left: 3px; /* Adjusted position to center it within the slider */
+  bottom: 6px; /* Adjusted position to center it within the slider */
+  background-color: white;
+  border-radius: 50%;
+  transition: transform 0.2s ease-in-out;
+}
+
+.switch input:checked + .slider {
+  background-color: #2196f3;
+}
+
+.switch input:checked + .slider:before {
+  transform: translateY(-40px);
+}
+
+.switch .slider.on {
+  background-color: #2196f3;
+}
+
+.switch .slider.on:before {
+  transform: translateY(-40px);
+}
+
+.switch label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  color: #333;
+  cursor: pointer;
+  white-space: nowrap; /* Prevent text from wrapping */
+}
+
+.switch input:checked + .slider:before {
+  background-color: white; /* Match the background color of the slider track */
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.3); /* Add a subtle box shadow */
+}
+
+.switch .slider.on:before {
+  background-color: white; /* Match the background color of the slider track */
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.3); /* Add a subtle box shadow */
+}
+
+.switch .slider-label {
+  position: absolute;
+  font-size: 10px;
+  color: #333;
+}
+
+.switch-label {
+  position: absolute;
+  top: -20px; /* Adjusted position to place it above the switch */
+}
+
+.top-label {
+  top: 5px; /* Adjusted position to place it below the switch label */
+}
+
+.bottom-label {
+  bottom: -15px; /* Adjusted position to place it at the bottom */
+}
