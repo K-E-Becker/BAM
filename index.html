@@ -7,55 +7,111 @@
     <title>BAM</title>
   </head>
   <body>
-    <div class="switch">
-      <label>
-        <span class="switch-label" id="switch-label1">Switch 1:</span>
-        <input id="switch1" type="checkbox" />
-        <span class="slider" id="switch1Status"></span>
-        <span class="slider-label top-label">1</span>
-        <span class="slider-label bottom-label">0</span>
-      </label>
+    <div class="row1">
+      <div class="switch">
+        <label>
+          <span class="switch-label" id="switch-label1">Switch 1:</span>
+          <input id="switch1" type="checkbox" />
+          <span class="slider" id="switch1Status"></span>
+          <span class="slider-label top-label">1</span>
+          <span class="slider-label bottom-label">0</span>
+        </label>
+      </div>
+      <div class="switch">
+        <label>
+          <span class="switch-label" id="switch-label2">Switch 2:</span>
+          <input id="switch2" type="checkbox" />
+          <span class="slider" id="switch2Status"></span>
+          <span class="slider-label top-label">1</span>
+          <span class="slider-label bottom-label">0</span>
+        </label>
+      </div>
+      <div class="switch">
+        <label>
+          <span class="switch-label" id="switch-label3">Switch 3:</span>
+          <input id="switch3" type="checkbox" />
+          <span class="slider" id="switch3Status"></span>
+          <span class="slider-label top-label">1</span>
+          <span class="slider-label bottom-label">0</span>
+        </label>
+      </div>
+      <div class="switch">
+        <label>
+          <span class="switch-label" id="switch-label4">Switch 4:</span>
+          <input id="switch4" type="checkbox" />
+          <span class="slider" id="switch4Status"></span>
+          <span class="slider-label top-label">1</span>
+          <span class="slider-label bottom-label">0</span>
+        </label>
+      </div>
+      <div class="switch">
+        <label>
+          <span class="switch-label" id="switch-label5">Switch 5:</span>
+          <input id="switch5" type="checkbox" />
+          <span class="slider" id="switch5Status"></span>
+          <span class="slider-label top-label">1</span>
+          <span class="slider-label bottom-label">0</span>
+        </label>
+      </div>
     </div>
-    <div class="switch">
-      <label>
-        <span class="switch-label" id="switch-label2">Switch 2:</span>
-        <input id="switch2" type="checkbox" />
-        <span class="slider" id="switch2Status"></span>
-        <span class="slider-label top-label">1</span>
-        <span class="slider-label bottom-label">0</span>
-      </label>
-    </div>
-    <div class="switch">
-      <label>
-        <span class="switch-label" id="switch-label3">Switch 3:</span>
-        <input id="switch3" type="checkbox" />
-        <span class="slider" id="switch3Status"></span>
-        <span class="slider-label top-label">1</span>
-        <span class="slider-label bottom-label">0</span>
-      </label>
-    </div>
-    <div class="switch">
-      <label>
-        <span class="switch-label" id="switch-label4">Switch 4:</span>
-        <input id="switch4" type="checkbox" />
-        <span class="slider" id="switch4Status"></span>
-        <span class="slider-label top-label">1</span>
-        <span class="slider-label bottom-label">0</span>
-      </label>
-    </div>
-    <div class="switch">
-      <label>
-        <span class="switch-label" id="switch-label5">Switch 5:</span>
-        <input id="switch5" type="checkbox" />
-        <span class="slider" id="switch5Status"></span>
-        <span class="slider-label top-label">1</span>
-        <span class="slider-label bottom-label">0</span>
-      </label>
+    <div class="row2">
+      <div class="switch">
+        <label>
+          <span class="switch-label" id="switch-label6">Switch 6:</span>
+          <input id="switch6" type="checkbox" />
+          <span class="slider" id="switch1Status"></span>
+          <span class="slider-label top-label">1</span>
+          <span class="slider-label bottom-label">0</span>
+        </label>
+      </div>
+      <div class="switch">
+        <label>
+          <span class="switch-label" id="switch-label7">Switch 7:</span>
+          <input id="switch7" type="checkbox" />
+          <span class="slider" id="switch2Status"></span>
+          <span class="slider-label top-label">1</span>
+          <span class="slider-label bottom-label">0</span>
+        </label>
+      </div>
+      <div class="switch">
+        <label>
+          <span class="switch-label" id="switch-label8">Switch 8:</span>
+          <input id="switch8" type="checkbox" />
+          <span class="slider" id="switch3Status"></span>
+          <span class="slider-label top-label">1</span>
+          <span class="slider-label bottom-label">0</span>
+        </label>
+      </div>
+      <div class="switch">
+        <label>
+          <span class="switch-label" id="switch-label9">Switch 9:</span>
+          <input id="switch9" type="checkbox" />
+          <span class="slider" id="switch4Status"></span>
+          <span class="slider-label top-label">1</span>
+          <span class="slider-label bottom-label">0</span>
+        </label>
+      </div>
+      <div class="switch">
+        <label>
+          <span class="switch-label" id="switch-label10">Switch 10:</span>
+          <input id="switch10" type="checkbox" />
+          <span class="slider" id="switch5Status"></span>
+          <span class="slider-label top-label">1</span>
+          <span class="slider-label bottom-label">0</span>
+        </label>
+      </div>
     </div>
 
     <div>
-      <button id="addButton">Add</button>
-      Result <span id="result">0</span>
+      <button id="addButton">ADD</button>
+      <h3>Binary</h3>
+      <p>Result Row 1: <span id="resultRow1"></span></p>
+      <p>Result Row 2: <span id="resultRow2"></span></p>
+      <p>Total Binary: <span id="totalBinary"></span></p>
+      <h3>Decimal</h3>
+      <p>Result Row 1: <span id="decimalResult1"></span></p>
+      <p>Result Row 2: <span id="decimalResult2"></span></p>
+      <p>Total Decimal: <span id="totalDecimal"></span></p>
     </div>
     <script src="index.js"></script>
   </body>
