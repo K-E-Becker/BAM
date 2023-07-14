@@ -2,6 +2,9 @@
 
 let switch1 = false;
 let switch2 = false;
+let switch3 = false;
+let switch4 = false;
+let switch5 = false;
 let carry = false;
 let result = 0;
 
@@ -13,10 +16,28 @@ const handleSwitch1 = () => {
 const handleSwitch2 = () => {
   switch2 = !switch2;
 };
+//handle the switch between on and off for switch 3
+const handleSwitch3 = () => {
+  switch3 = !switch3;
+};
+//handle the switch between on and off for switch 4
+const handleSwitch4 = () => {
+  switch4 = !switch4;
+};
+//handle the switch between on and off for switch 5
+const handleSwitch5 = () => {
+  switch5 = !switch5;
+};
 
 const handleAddition = () => {
   //add switch1, switch2, and if those are over 1...then a carry
-  let sum = (switch1 ? 1 : 0) + (switch2 ? 1 : 0) + (carry ? 1 : 0);
+  let sum =
+    (switch1 ? 1 : 0) +
+    (switch2 ? 1 : 0) +
+    (switch3 ? 1 : 0) +
+    (switch4 ? 1 : 0) +
+    (switch5 ? 1 : 0) +
+    (carry ? 1 : 0);
 
   //is there a carry
   let newCarry = sum > 1;
@@ -27,13 +48,17 @@ const handleAddition = () => {
   carry = newCarry;
   result = newSum;
 
-  updateDom();
+  //this fixed a performance issue
+  setTimeout(updateDom, 0);
 };
 
 document.querySelector("#switch1").addEventListener("change", handleSwitch1);
 document.querySelector("#switch2").addEventListener("change", handleSwitch2);
+document.querySelector("#switch3").addEventListener("change", handleSwitch3);
+document.querySelector("#switch4").addEventListener("change", handleSwitch4);
+document.querySelector("#switch5").addEventListener("change", handleSwitch5);
 document.querySelector("#addButton").addEventListener("click", handleAddition);
 
 function updateDom() {
-  document.querySelector("#result").textContent = result.toString();
+  document.querySelector("#result").textContent = result;
 }
