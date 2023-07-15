@@ -35,6 +35,39 @@ const addBinaryNumbers = (switchValue1, switchValue2) => {
   return binarySum;
 };
 
+const subtractBinaryNumbers = (switchValue1, switchValue2) => {
+  const decimal1 = parseInt(switchValue1, 2);
+  const decimal2 = parseInt(switchValue2, 2);
+  const decimalSum = decimal1 - decimal2;
+  const binarySum = decimalSum.toString(2);
+
+  return binarySum;
+};
+
+const multiplyBinaryNumbers = (switchValue1, switchValue2) => {
+  const decimal1 = parseInt(switchValue1, 2);
+  const decimal2 = parseInt(switchValue2, 2);
+  const decimalProduct = decimal1 * decimal2;
+  const binaryProduct = decimalProduct.toString(2);
+
+  return binaryProduct;
+};
+
+const divideBinaryNumbers = (switchValue1, switchValue2) => {
+  const decimal1 = parseInt(switchValue1, 2);
+  const decimal2 = parseInt(switchValue2, 2);
+
+  if (decimal2 === 0) {
+    // Handle division by zero
+    return "NaN";
+  }
+
+  const decimalProduct = decimal1 / decimal2;
+  const binaryProduct = decimalProduct.toString(2);
+
+  return binaryProduct;
+};
+
 const updateLightBulbs = (totalBinary) => {
   const bulbsContainer = document.querySelector(".bulbs");
   bulbsContainer.innerHTML = "";
@@ -90,10 +123,26 @@ document
 document.querySelector("#addButton").addEventListener("click", () => {
   const switchValue1 = getSwitchValue1();
   const switchValue2 = getSwitchValue2();
-  const totalBinary = addBinaryNumbers(switchValue1, switchValue2);
+  const operation = document.querySelector(".plus-symbol").value;
+
+  let totalBinary;
+  if (operation === "+") {
+    totalBinary = addBinaryNumbers(switchValue1, switchValue2);
+  } else if (operation === "-") {
+    totalBinary = subtractBinaryNumbers(switchValue1, switchValue2);
+  } else if (operation === "*") {
+    totalBinary = multiplyBinaryNumbers(switchValue1, switchValue2);
+  } else if (operation === "/") {
+    totalBinary = divideBinaryNumbers(switchValue1, switchValue2);
+  } else {
+    // Handle invalid operation
+    return;
+  }
+
   const decimalNumber1 = parseInt(switchValue1, 2);
   const decimalNumber2 = parseInt(switchValue2, 2);
   const totalDecimal = parseInt(totalBinary, 2);
+
   updateDom(
     switchValue1,
     switchValue2,
