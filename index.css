@@ -136,3 +136,14 @@
 hr {
   width: 60%;
 }
+
+.bulbs {
+  display: flex;
+  justify-content: center;
+}
+
+.bulbs img {
+  width: 50px;
+  height: 75px;
+  margin: 20px;
+}
