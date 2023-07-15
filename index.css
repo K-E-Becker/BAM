@@ -91,3 +91,48 @@
 .bottom-label {
   bottom: -15px; /* Adjusted position to place it at the bottom */
 }
+
+#addButton {
+  margin-right: 20px;
+}
+#resetButton {
+  margin-left: 20px;
+}
+
+.buttonContainer,
+.row1,
+.row2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.resultRows {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.binaryRow {
+  align-items: flex-start;
+  margin-right: auto;
+  margin-left: 25%;
+  width: 25%;
+}
+
+.decimalRow {
+  align-items: flex-start;
+  margin-right: auto;
+  margin-left: auto;
+  width: 25%;
+}
+
+.plus-symbol {
+  margin-left: 17%;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+hr {
+  width: 60%;
+}

@@ -1,6 +1,6 @@
 "use strict";
 
-const switchesArr = Array.from({ length: 10 }, () => false);
+const switchesArr = Array.from({ length: 20 }, () => false);
 
 const handleSwitch = (index) => {
   switchesArr[index] = !switchesArr[index];
@@ -9,7 +9,7 @@ const handleSwitch = (index) => {
 const getSwitchValue1 = () => {
   let output = "";
 
-  for (let i = 0; i < 5; i++) {
+  for (let i = 0; i < 10; i++) {
     output += switchesArr[i] ? "1" : "0";
   }
 
@@ -19,7 +19,7 @@ const getSwitchValue1 = () => {
 const getSwitchValue2 = () => {
   let output = "";
 
-  for (let i = 5; i < 10; i++) {
+  for (let i = 10; i < 20; i++) {
     output += switchesArr[i] ? "1" : "0";
   }
 
