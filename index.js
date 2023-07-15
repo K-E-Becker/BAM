@@ -1,6 +1,6 @@
 "use strict";
 
-const switchesArr = Array.from({ length: 20 }, () => false);
+const switchesArr = Array.from({ length: 16 }, () => false);
 
 const handleSwitch = (index) => {
   switchesArr[index] = !switchesArr[index];
@@ -9,7 +9,7 @@ const handleSwitch = (index) => {
 const getSwitchValue1 = () => {
   let output = "";
 
-  for (let i = 0; i < 10; i++) {
+  for (let i = 0; i < 8; i++) {
     output += switchesArr[i] ? "1" : "0";
   }
 
@@ -19,7 +19,7 @@ const getSwitchValue1 = () => {
 const getSwitchValue2 = () => {
   let output = "";
 
-  for (let i = 10; i < 20; i++) {
+  for (let i = 8; i < 16; i++) {
     output += switchesArr[i] ? "1" : "0";
   }
 
@@ -34,6 +34,28 @@ const addBinaryNumbers = (switchValue1, switchValue2) => {
 
   return binarySum;
 };
+
+function updateLightBulbs(totalBinary) {
+  const bulbsContainer = document.querySelector(".bulbs");
+  bulbsContainer.innerHTML = "";
+
+  for (let i = 0; i < totalBinary.length; i++) {
+    const bulbValue = totalBinary[i];
+    const bulbContainer = document.createElement("div");
+    bulbContainer.classList.add("bulb-container");
+
+    const bulbImage = document.createElement("img");
+    bulbImage.src = bulbValue === "1" ? "lit.png" : "unlit.png";
+
+    const bulbText = document.createElement("span");
+    bulbText.classList.add("bulb-text");
+    bulbText.textContent = bulbValue;
+
+    bulbContainer.appendChild(bulbImage);
+    bulbContainer.appendChild(bulbText);
+    bulbsContainer.appendChild(bulbContainer);
+  }
+}
 
 const handleReset = () => {
   switchesArr.fill(false);
@@ -53,6 +75,10 @@ const handleReset = () => {
   ].map((selector) => document.querySelector(selector));
 
   resetElements.forEach((element) => (element.textContent = ""));
+
+  updateLightBulbs("00000000");
+  const bulbTextElements = document.querySelectorAll(".bulb-text");
+  bulbTextElements.forEach((element) => (element.textContent = ""));
 };
 
 document
@@ -76,6 +102,7 @@ document.querySelector("#addButton").addEventListener("click", () => {
     decimalNumber2,
     totalDecimal
   );
+  updateLightBulbs(totalBinary);
 });
 
 document.querySelector("#resetButton").addEventListener("click", () => {
