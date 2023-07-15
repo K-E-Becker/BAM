@@ -107,6 +107,34 @@
   align-items: center;
 }
 
+.row1Switch {
+  display: flex;
+  justify-content: flex-end;
+  width: 75%;
+}
+
+.rowResults1 {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  width: 25%;
+  margin-left: 30px;
+}
+
+.row2Switch {
+  display: flex;
+  justify-content: flex-end;
+  width: 75%;
+}
+
+.rowResults2 {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  width: 25%;
+  margin-left: 30px;
+}
+
 .resultRows {
   display: flex;
   flex-direction: row;
@@ -128,7 +156,7 @@
 }
 
 .plus-symbol {
-  margin-left: 17%;
+  margin-left: 20%;
   font-weight: bold;
   font-size: 20px;
 }
@@ -140,10 +168,21 @@ hr {
 .bulbs {
   display: flex;
   justify-content: center;
+  height: 175px;
+}
+.bulb-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
 }
 
 .bulbs img {
   width: 50px;
   height: 75px;
-  margin: 20px;
+  margin: 10px;
+}
+
+.bulb-text {
+  color: red;
 }
