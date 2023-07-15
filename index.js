@@ -35,7 +35,7 @@ const addBinaryNumbers = (switchValue1, switchValue2) => {
   return binarySum;
 };
 
-function updateLightBulbs(totalBinary) {
+const updateLightBulbs = (totalBinary) => {
   const bulbsContainer = document.querySelector(".bulbs");
   bulbsContainer.innerHTML = "";
 
@@ -55,7 +55,7 @@ function updateLightBulbs(totalBinary) {
     bulbContainer.appendChild(bulbText);
     bulbsContainer.appendChild(bulbContainer);
   }
-}
+};
 
 const handleReset = () => {
   switchesArr.fill(false);
@@ -109,18 +109,18 @@ document.querySelector("#resetButton").addEventListener("click", () => {
   handleReset();
 });
 
-function updateDom(
+const updateDom = (
   switchValue1,
   switchValue2,
   totalBinary,
   decimalNumber1,
   decimalNumber2,
   totalDecimal
-) {
+) => {
   document.querySelector("#resultRow1").textContent = switchValue1;
   document.querySelector("#resultRow2").textContent = switchValue2;
   document.querySelector("#totalBinary").textContent = totalBinary;
   document.querySelector("#decimalResult1").textContent = decimalNumber1;
   document.querySelector("#decimalResult2").textContent = decimalNumber2;
   document.querySelector("#totalDecimal").textContent = totalDecimal;
-}
+};
