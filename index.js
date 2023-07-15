@@ -53,6 +53,20 @@ const multiplyBinaryNumbers = (switchValue1, switchValue2) => {
   return binaryProduct;
 };
 
+const divideBinaryNumbers = (switchValue1, switchValue2) => {
+  const decimal1 = parseInt(switchValue1, 2);
+  const decimal2 = parseInt(switchValue2, 2);
+
+  if (decimal2 === 0) {
+    return "Division by zero";
+  }
+
+  const decimalQuotient = Math.floor(decimal1 / decimal2);
+  const binaryQuotient = decimalQuotient.toString(2);
+
+  return binaryQuotient;
+};
+
 const updateLightBulbs = (totalBinary) => {
   const bulbsContainer = document.querySelector(".bulbs");
   bulbsContainer.innerHTML = "";
@@ -117,6 +131,8 @@ document.querySelector("#addButton").addEventListener("click", () => {
     totalBinary = subtractBinaryNumbers(switchValue1, switchValue2);
   } else if (operation === "*") {
     totalBinary = multiplyBinaryNumbers(switchValue1, switchValue2);
+  } else if (operation === "/") {
+    totalBinary = divideBinaryNumbers(switchValue1, switchValue2);
   } else {
     // Handle invalid operation
     return;
