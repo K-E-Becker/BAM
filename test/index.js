@@ -12,10 +12,10 @@ const addBinaryNumbers = (switchValue1, switchValue2) => {
 const subtractBinaryNumbers = (switchValue1, switchValue2) => {
   const decimal1 = parseInt(switchValue1, 2);
   const decimal2 = parseInt(switchValue2, 2);
-  const decimalSum = decimal1 - decimal2;
-  const binarySum = decimalSum.toString(2);
+  const decimalDifference = decimal1 - decimal2;
+  const binaryDifference = decimalDifference.toString(2);
 
-  return binarySum;
+  return binaryDifference;
 };
 
 const multiplyBinaryNumbers = (switchValue1, switchValue2) => {
