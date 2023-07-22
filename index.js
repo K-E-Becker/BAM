@@ -172,3 +172,10 @@ const updateDom = (
   document.querySelector("#decimalResult2").textContent = decimalNumber2;
   document.querySelector("#totalDecimal").textContent = totalDecimal;
 };
+
+module.exports = {
+  addBinaryNumbers,
+  subtractBinaryNumbers,
+  multiplyBinaryNumbers,
+  divideBinaryNumbers,
+};

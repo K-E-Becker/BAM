@@ -1,0 +1,13 @@
+{
+  "name": "BAM",
+  "version": "1.0.0",
+  "description": "a visual representation to add/subtract/multiply/divide two binary numbers",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "devDependencies": {
+    "chai": "^4.3.7",
+    "mocha": "^10.2.0"
+  }
+}
